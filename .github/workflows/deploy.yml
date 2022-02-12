@@ -15,6 +15,5 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run build  
-      - run: npm install -g serve
-      - run: nohup serve -s build &
+      - run: pm2 serve build 3000 --spa 
       - run: echo "This job's status is ${{ job.status }}."
