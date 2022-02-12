@@ -17,5 +17,6 @@ jobs:
       - run: npm run build  
       - run: npm install -g serve
       - run: serve -s build &
-      - run: disown
+      - run: jobs
+      - run: disown %-
       - run: echo "This job's status is ${{ job.status }}."
