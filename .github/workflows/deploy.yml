@@ -15,5 +15,5 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run build  
-      - run: mv build/ /var/www/82.165.59.182
+      - run: mv -v build/* /var/www/82.165.59.182
       - run: echo "This job's status is ${{ job.status }}."
