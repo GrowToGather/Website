@@ -3,10 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "autolinker": "^3.14.3",
+    "btoa": "^1.2.1",
+    "cookie": "^0.4.2",
+    "deepmerge": "^4.2.2",
+    "fast-json-patch": "^3.1.0",
+    "formdata-node": "^4.3.2",
+    "is-plain-object": "^5.0.0",
+    "isarray": "^2.0.5",
+    "qs": "^6.10.3",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-router-dom": "6.2.1",
-    "swagger-ui-react": "^4.5.0"
+    "regenerator-runtime": "^0.13.9",
+    "swagger-ui-react": "4.5.0",
+    "traverse": "^0.6.6",
+    "url": "^0.11.0"
   },
   "scripts": {
     "start": "react-scripts start",
