@@ -10,7 +10,7 @@ tags:
   - name: events
     description: Manage event data
 paths:
-  /events/getCalendarEvents:
+  /events/calendar:
     get:
       tags:
         - events
@@ -23,7 +23,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CalenderEvents'
-  /events/getUpcommingEvents:
+  /events/upcomming:
     get:
       tags:
         - events
