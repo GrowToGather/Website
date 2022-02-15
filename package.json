@@ -21,11 +21,12 @@
     "stream": "^0.0.2",
     "swagger-ui-react": "4.5.0",
     "traverse": "^0.6.6",
-    "url": "^0.11.0"
+    "url": "^0.11.0",
+    "yarn": "^1.22.17"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts --max_old_space_size=512 build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
