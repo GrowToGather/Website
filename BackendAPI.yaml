@@ -1,7 +1,7 @@
 openapi: 3.0.0
 servers:
   - description: Link to test database
-    url: https://www.73743355.xyz/api
+    url: https://www.73743355.xyz:23892
 info:
   description: API to receive data for the Website
   version: "1.0.0"
