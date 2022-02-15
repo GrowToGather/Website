@@ -12,7 +12,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '16.x'
-      - run: npm i
+      - run: npm ci
       - run: npm run build  
       - run: rsync build/* /var/www/82.165.59.182
       - run: echo "This job's status is ${{ job.status }}."
