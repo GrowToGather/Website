@@ -1,0 +1,30 @@
+name: Test Deployment
+on:
+  push:
+    branches:
+      - deployment
+jobs:
+  Build:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '16.x'
+      - run: yarn install
+      - run: yarn run build  
+      - name: Archive build artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: build folder
+          path: build
+  Debloy:
+    needs: Build
+    runs-on: self-hosted
+    steps:
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v2.1.0
+        with:
+          name: build folder
+          path: /var/www/82.165.59.182/GTG-Test
