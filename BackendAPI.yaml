@@ -1,0 +1,189 @@
+openapi: 3.0.0
+servers:
+  - description: Link to test database
+    url: https://www.73743355.xyz:23892
+info:
+  description: API to receive data for the Website
+  version: "1.0.0"
+  title: WebsiteBackend API
+tags:
+  - name: events
+    description: Manage event data
+paths:
+  /events/calendar:
+    get:
+      tags:
+        - events
+      summary: Get calendar data
+      description: Receives all events and informations on event categories
+      responses:
+        '200':
+          description: calendar data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CalenderEvents'
+  /events/upcomming:
+    get:
+      tags:
+        - events
+      summary: Get next 3 events
+      description: Get the next 3 events which are from a diffrent EventType
+      responses:
+        '200':
+          description: Upcomming Events
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Event'
+components:
+  schemas:
+    CalenderEvents:
+      description: 'Tells which age range the event is targeted for'
+      required:
+        - events
+        - eventTypes
+        - ageTypes
+        - areaTypes
+        - languageTypes
+      properties:
+        events:
+          type: array
+          items: 
+            $ref: '#/components/schemas/Event'
+        eventTypes:
+          type: array
+          items: 
+            $ref: '#/components/schemas/EventType'
+        ageTypes:
+          type: array
+          items: 
+            $ref: '#/components/schemas/Age'
+        areaTypes:
+          type: array
+          items: 
+            $ref: '#/components/schemas/Area'
+        languageTypes:
+          type: array
+          items: 
+            $ref: '#/components/schemas/Language'
+      type: object  
+  
+    Event:
+      type: object
+      required:
+        - eventType
+        - age
+        - area
+        - language
+        - name
+        - date
+      properties:
+        eventType:
+          type: number
+          description: 'ID connecting with EventType category'
+          example: 12
+        age:
+          type: number
+          description: 'ID connecting with Age category'
+          example: 2
+        area:
+          type: number
+          description: 'ID connecting with Area category'
+          example: 16
+        language:
+          type: number
+          description: 'ID connecting with Language category'
+          example: 0
+        name:
+          type: string
+          description: 'The name of an event as title'
+          example: 'Event title'
+        date:
+          type: number
+          description: 'date represented as UNIX timestamp'
+          example: 1644875210
+        link:
+          type: string
+          description: 'URL link to event access'
+          format: url
+          example: 'https://www.link.to/zoom'
+        desciption:
+          type: string
+          description: 'A more detailed description of an event'
+          example: 'Detailed description of an event'
+          
+    EventType:
+      description: 'Tells what type of event it is'
+      required:
+        - id
+        - eventName
+        - imagePath
+        - ageMax
+      properties:
+        id:
+          type: number
+          example: 6
+        eventName:
+          type: string
+          example: 'Online-Friendshipping'
+        imagePath:
+          type: string
+          example: 'path/to/image.png'
+      type: object      
+          
+    Age:
+      description: 'Tells which age range the event is targeted for'
+      required:
+        - id
+        - ageName
+        - ageMin
+        - ageMax
+      properties:
+        id:
+          type: number
+          example: 3
+        ageName:
+          type: string
+          example: 'All'
+        ageMin:
+          type: number
+          example: 0
+        ageMax:
+          type: number
+          example: 999
+      type: object
+      
+    Area:
+      description: 'Tells which area the event is targeted for'
+      required:
+        - id
+        - continent
+        - country
+      properties:
+        id:
+          type: number
+          example: 9
+        continent:
+          type: string
+          example: 'Europe'
+        country:
+          type: string
+          example: 'Spain'
+      type: object   
+      
+    Language:
+      description: 'Tells which language the event is targeted for'
+      required:
+        - id
+        - languageName
+      properties:
+        id:
+          type: number
+          example: 1
+        languageName:
+          type: string
+          example: 'English'
+      type: object
