@@ -7,7 +7,7 @@ window.Buffer = Buffer
 
 function Api() {
   return (
-    <SwaggerUI url="BackendAPI.yaml" />
+    <SwaggerUI url="https://raw.githubusercontent.com/GrowToGather/Website/main/BackendAPI.yaml" />
   );
 }
 
