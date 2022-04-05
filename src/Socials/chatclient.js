@@ -20,7 +20,6 @@ var mediaConstraints = {
 var myUsername = null;
 var targetUsername = null;      // To store username of other peer
 var myPeerConnection = null;    // RTCPeerConnection
-var transceiver = null;         // RTCRtpTransceiver
 var webcamStream = null;        // MediaStream from webcam
 
 // Output logging information to console.
@@ -74,7 +73,7 @@ export function connect(username) {
   if (document.location.protocol === "https:") {
     scheme += "s";
   }
-  serverUrl = scheme + "://" + myHostname + ":9090" + "/" + scheme;
+  serverUrl = `${scheme}://${myHostname}:9090/${scheme}`;
 
   log(`Connecting to server: ${serverUrl}`);
   connection = new WebSocket(serverUrl);
@@ -84,7 +83,6 @@ export function connect(username) {
   }
 
   connection.onmessage = function(evt) {
-    var text = "";
     var msg = JSON.parse(evt.data);
     log("Message received: ");
     console.dir(msg);
@@ -94,23 +92,6 @@ export function connect(username) {
         setUsername(myUsername);
         break;
 
-      case "username":
-        text = "<b>User <em>" + msg.name + "</em> signed in</b><br>";
-        break;
-
-      case "message":
-        text = "<b>" + msg.name + "</b>: " + msg.text + "<br>";
-        break;
-
-      case "rejectusername":
-        myUsername = msg.name;
-        text = "<b>Your username has been set to <em>" + myUsername +
-          "</em> because the name you chose is in use.</b><br>";
-        break;
-
-      // Signaling messages: these messages are used to trade WebRTC
-      // signaling information during negotiations leading up to a video
-      // call.
       case "pairing":
         invite(msg.name)
         break;
@@ -184,7 +165,7 @@ async function handleNegotiationNeededEvent() {
     // return to the caller. Another negotiationneeded event
     // will be fired when the state stabilizes.
 
-    if (myPeerConnection.signalingState != "stable") {
+    if (myPeerConnection.signalingState !== "stable") {
       log("     -- The connection isn't stable yet; postponing...")
       return;
     }
@@ -260,6 +241,8 @@ function handleICEConnectionStateChangeEvent(event) {
     case "disconnected":
       closeVideoCall();
       break;
+    default:
+      break;
   }
 }
 
@@ -275,6 +258,8 @@ function handleSignalingStateChangeEvent(event) {
   switch(myPeerConnection.signalingState) {
     case "closed":
       closeVideoCall();
+      break;
+    default:
       break;
   }
 }
@@ -419,7 +404,7 @@ async function invite(clickedUsername) {
 
     try {
       webcamStream.getTracks().forEach(
-        transceiver = track => myPeerConnection.addTransceiver(track, {streams: [webcamStream]})
+        track => myPeerConnection.addTransceiver(track, {streams: [webcamStream]})
       );
     } catch(err) {
       handleGetUserMediaError(err);
@@ -449,7 +434,7 @@ async function handleVideoOfferMsg(msg) {
 
   // If the connection isn't stable yet, wait for it...
 
-  if (myPeerConnection.signalingState != "stable") {
+  if (myPeerConnection.signalingState !== "stable") {
     log("  - But the signaling state isn't stable, so triggering rollback");
 
     // Set the local and remove descriptions for rollback; don't proceed
@@ -480,7 +465,7 @@ async function handleVideoOfferMsg(msg) {
 
     try {
       webcamStream.getTracks().forEach(
-        transceiver = track => myPeerConnection.addTransceiver(track, {streams: [webcamStream]})
+        track => myPeerConnection.addTransceiver(track, {streams: [webcamStream]})
       );
     } catch(err) {
       handleGetUserMediaError(err);

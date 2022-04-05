@@ -12,7 +12,7 @@ function Socials() {
 
     function openSocial(social) {
         console.log(social);
-        if (username == "") {
+        if (username === "") {
             alert("Enter a Username first!");
             return
         }

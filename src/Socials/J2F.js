@@ -16,7 +16,7 @@ function J2F(props) {
             <div className="camerabox">
                 <video id="received_video" autoPlay></video>
                 <video id="local_video" autoPlay muted></video>
-                <button id="hangup-button" onClick={hangUpCall} role="button" disabled>Hang Up</button>
+                <button id="hangup-button" onClick={hangUpCall} disabled>Hang Up</button>
             </div>
         </div>
 	);
