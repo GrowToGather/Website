@@ -1,0 +1,182 @@
+body {
+    background-color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/* HEADER */
+
+header {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.header {
+    align-items: center;
+    display: flex;
+    color: rgb(0, 0, 0, 0.8);
+    padding-right: 350px;
+}
+
+.logo_text {
+    font-size: 28px;
+    color: #FFB434;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li a {
+    display: block;
+    padding: 8rem 2%;
+    text-decoration: none;
+    color: #2A3033;
+   
+    padding: 20px;
+}
+
+.nav {
+    display: flex;
+}
+
+
+/* MAIN */
+.main__img {
+    max-width: 100%;
+}
+
+.about {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.about-h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    padding-top: 40px;
+}
+
+.about__text-h2 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 150%;
+    max-width: 350px;
+}
+.about__img {
+    margin: 40px;
+    padding-right: 50px;
+
+    margin: 40px 40px 40px 10px
+}
+
+/* EVENTS */
+
+.events {
+    background: #FFCC49;
+    height: 500px;
+}
+.events__text-h1 {
+    padding: 50px 50px 0;
+    text-align: center;
+}
+
+.cards__1 {
+    width: 320px;
+    height: 230px;
+    background: #FFE9B1;
+    margin: 10px;
+
+}
+
+.cards__1:hover {
+    box-shadow: 0px 10px 20px rgba(237, 177, 22, 0.5);
+}
+.cards {
+    display: flex;
+    margin-bottom: 50px;
+}
+.cards__text-h {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    margin: 50px 50px 0 50px;
+    text-align: center;
+}
+
+.cards__date {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 300;
+    font-size: 17px;
+    text-align: center;
+    color: #622CD7;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.events__content {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.text__link {
+    color: #2A3033;
+}
+
+/* TESTIMONIALS */
+
+.reviews {
+    background-image: url(./images/bg_review.jpg);
+    max-width: 1920px;
+    height: 600px;
+}
+
+
+/* scroll */
+
+div.scrollup {
+    position: fixed;
+    color: #fff;
+    background-color: #013662;
+    right: 30px;
+    bottom: 20px;
+    padding: 9px 13px;
+    font-size: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+    text-align: center;
+}
+
+div.scrollup:hover {
+    background-color: #000;
+}
+
+/* FOTTER */
+
+footer {
+    background: #252525;
+}
+
+.footer__text {
+    color: white;
+
+}
+
+.footer_1 {
+    max-width: 1000px;
+    margin: 0 auto;
+}
