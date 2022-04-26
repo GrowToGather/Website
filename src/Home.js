@@ -30,7 +30,7 @@ function Home() {
             <div className="topbar">
                 <header>
                     <div className="header">
-                        <a href="./"><img src="./images/logo.svg" alt="Logo image" /></a>
+                        <a href="./"><img src="./images/logo.svg" alt="Logo" /></a>
 
                         <h1 className="logo_text">Grow to Gather</h1>
                     </div>
@@ -73,7 +73,7 @@ function Home() {
                     <div className="cards">
                         {
                             isLoading ? events.map(event =>
-                                event.name != "" ? 
+                                event.name !== "" ? 
                                 <div className="cards__1" key={eventIndex++}>
                                     <p className="cards__text-h">{event.name}</p>
                                     <p className="cards__date">{format(new Date(event.date * 1000), "do MMMM")}</p>
@@ -82,24 +82,22 @@ function Home() {
                                 : 
                                 <div className="cards__1" key={eventIndex++}>
                                     <p className="cards__text-h">No Further Events</p>
-                                    <p className="cards__date" />
-                                    <a href="" className="text__link" />
                                 </div>
                             ) : 
                                 <><div className="cards__1">
                                     <p className="cards__text-h" />
                                     <p className="cards__date" />
-                                    <a href="" className="text__link" />
+                                    <p className="text__link" />
                                 </div>
                                     <div className="cards__1">
                                         <p className="cards__text-h" />
                                         <p className="cards__date" />
-                                        <a href="" className="text__link" />
+                                        <p className="text__link" />
                                     </div>
                                     <div className="cards__1">
                                         <p className="cards__text-h" />
                                         <p className="cards__date" />
-                                        <a href="" className="text__link" />
+                                        <p className="text__link" />
                                     </div></>
                         }
 
