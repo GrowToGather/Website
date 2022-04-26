@@ -3,7 +3,8 @@ import { render } from "react-dom";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import './index.css';
-import App from './App';
+import Home from './Home';
+import Events from './Events';
 import Api from './Api';
 import Socials from './Socials/Socials';
 import J2D from './Socials/J2D';
@@ -13,7 +14,8 @@ import J2F from './Socials/J2F';
 render(
   <Router>
     <Routes>
-      <Route path="/" element={<App />} />
+      <Route path="/" element={<Home/>} />
+      <Route path="/Events" element={<Events />} />
       <Route path="/api" element={<Api />} />
       <Route path="/socials" element={<Socials />} />
       <Route path="/socials/j2d" element={<J2D />} />

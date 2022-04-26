@@ -22,7 +22,7 @@
     <header>
         <div class="header">
         <a href="../G2G/main.html">
-            <img class="logo" src="./images/logo.svg" alt="Logo image" /></a>
+            <img class="logo" src="../G2G/images/logo.svg" alt="Logo image" /></a>
         
             <h1 class="logo_text">Grow to Gather</h1>
         </div>
