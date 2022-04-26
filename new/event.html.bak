@@ -11,7 +11,7 @@
 
 <body>
     <nav class="menu">
-        <img src="./images/logo.svg" alt="logo" class="logo">
+        <img src="../G2G/images/logoo.svg" alt="logo" class="logo">
 
         <ul>
             <li><a href="">home</a></li>
@@ -50,10 +50,10 @@
 
             <div class="links">
                 <button class="first_link"> <a href="" class="btn_card"> View Details</a></button>
-                <button class="second_link"><a href="" class="btn_card2"> <img src="./images/zoom.svg" alt="" class="btn_svg"> Join via Zoom</a></button>
+                <button class="second_link"><a href="" class="btn_card2"> <img src="../G2G/images/zoom.svg" alt="" class="btn_svg"> Join via Zoom</a></button>
             </div>
         </div>
-        <div class="flex2"><img src="./images/card_pic1.jpg" alt="activity picture" class="card_picture"></div>
+        <div class="flex2"><img src="../G2G/images/card_pic1.jpg" alt="activity picture" class="card_picture"></div>
     </div>
 </body>
 
