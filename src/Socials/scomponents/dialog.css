@@ -1,0 +1,56 @@
+.simple-dialog-com-container {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: right;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.simple-dialog-com-container1 {
+  flex: 0 0 auto;
+  max-width: 600px;
+  display: flex;
+  margin: var(--dl-space-space-twounits);
+  padding: var(--dl-space-space-unit);
+  align-items: flex-start;
+  border-radius: var(--dl-radius-radius-radius4);
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #42576F;
+  box-shadow: 0 0 20px 0 #000;
+}
+.simple-dialog-com-text {
+  color: #FFCC49;
+  font-size: 20px;
+}
+.simple-dialog-com-text1 {
+  color: var(--dl-color-gray-white);
+  margin-top: var(--dl-space-space-unit);
+  margin-bottom: var(--dl-space-space-unit);
+}
+.simple-dialog-com-input {
+  width: 100%;
+}
+.simple-dialog-com-container2 {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: var(--dl-space-space-unit);
+}
+.simple-dialog-com-button {
+  color: var(--dl-color-gray-white);
+  border-width: 0px;
+  margin-right: var(--dl-space-space-unit);
+  background-color: transparent;
+}
+.simple-dialog-com-button1 {
+  color: #42576F;
+  border-width: 0px;
+  background-color: #ffcc49;
+}

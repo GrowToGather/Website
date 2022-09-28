@@ -1,0 +1,138 @@
+.event-options-container {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  position: relative;
+  margin-top: var(--dl-space-space-twounits);
+  align-items: flex-start;
+  flex-direction: column;
+}
+.event-options-closed-select {
+  width: 150px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  border-width: 0px;
+  border-radius: 15px;
+  flex-direction: row;
+}
+.event-options-closed-select-text {
+  width: 100%;
+  text-align: left;
+}
+.event-options-closed-select-icon {
+  width: 15px;
+  height: 15px;
+  object-fit: cover;
+}
+.event-options-open-select {
+  flex: 0 0 auto;
+  width: 150px;
+  display: flex;
+  align-items: flex-start;
+  border-color: rgba(120, 120, 120, 0.4);
+  border-style: dashed;
+  border-radius: 15px;
+  flex-direction: column;
+  background-color: var(--dl-color-gray-white);
+  box-shadow: 0 0 10px 0 grey;
+}
+.event-options-button {
+  width: 150px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  border-width: 0px;
+  border-radius: 15px;
+  flex-direction: row;
+}
+.event-options-open-select-text {
+  width: 100%;
+  text-align: left;
+}
+.event-options-open-select-icon {
+  width: 15px;
+  height: 15px;
+  object-fit: cover;
+}
+.event-options-button1 {
+  width: 150px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  border-width: 0px;
+  border-radius: 15px;
+  flex-direction: row;
+}
+.event-options-image {
+  width: 15px;
+  height: 15px;
+  object-fit: cover;
+}
+.event-options-text {
+  color: #415771;
+  width: 100%;  
+  text-align: left;
+}
+.event-options-button2 {
+  width: 150px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-width: 0px;
+  border-radius: 15px;
+  flex-direction: row;
+}
+.event-options-image1 {
+  width: 15px;
+  height: 15px;
+  object-fit: cover;
+}
+.event-options-text1 {
+  margin-left: 2px;
+  color: #415771;
+  width: 100%;
+  text-align: left;
+}
+.event-options-button3 {
+  width: 150px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  border-width: 0px;
+  border-radius: 15px;
+  flex-direction: row;
+}
+.event-options-image2 {
+  width: 15px;
+  height: 15px;
+  object-fit: cover;
+}
+.event-options-text2 {
+  color: #415771;
+  width: 100%;
+  text-align: left;
+}
+.event-options-button4 {
+  width: 150px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  border-width: 0px;
+  border-radius: 15px;
+  flex-direction: row;
+}
+.event-options-image3 {
+  width: 15px;
+  height: 15px;
+  object-fit: cover;
+}
+.event-options-text3 {
+  color: #415771;
+  width: 100%;
+  text-align: left;
+}
+
+
+
+

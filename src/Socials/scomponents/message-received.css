@@ -1,0 +1,23 @@
+.message-received-container {
+  width: auto;
+  height: auto;
+  display: flex;
+  padding: var(--dl-space-space-unit);
+  position: relative;
+  max-width: 70%;
+  align-items: flex-start;
+  border-radius: var(--dl-radius-radius-radius4);
+  margin-bottom: var(--dl-space-space-halfunit);
+  padding-right: 16px;
+  flex-direction: column;
+  background-color: #42576F;
+}
+.message-received-text {
+  color: #ffffff;
+}
+
+
+
+
+
+
