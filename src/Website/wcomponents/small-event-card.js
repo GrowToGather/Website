@@ -6,7 +6,7 @@ import './small-event-card.css'
 
 const SmallEventCard = (props) => {
   return (
-    <div className={`small-event-card-gallery-card`}>
+    <div className={`small-event-card-gallery-card ${props.rootClassName}`}>
       <div className="small-event-card-container">
         <div className="small-event-card-container1">
           <div className="small-event-card-heading">
