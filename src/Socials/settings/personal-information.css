@@ -1,0 +1,263 @@
+.personal-information-container {
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.personal-information-container01 {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-self: center;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.personal-information-text {
+  font-size: 24px;
+}
+.personal-information-container02 {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.personal-information-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-color: #42576F;
+  border-width: 3px;
+  background-color: #919191;
+  border-radius: var(--dl-radius-radius-radius8);
+}
+.personal-information-container03 {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  margin-left: var(--dl-space-space-threeunits);
+  flex-direction: column;
+}
+.personal-information-button {
+  color: var(--dl-color-gray-white);
+  align-self: stretch;
+  text-align: center;
+  border-width: 0px;
+  margin-bottom: var(--dl-space-space-halfunit);
+  background-color: #7142ff;
+}
+.personal-information-button:hover {
+  background-color: #9162ff;
+}
+.personal-information-button1 {
+  color: var(--dl-color-gray-white);
+  align-self: stretch;
+  text-align: center;
+  border-width: 0px;
+  background-color: #42576F;
+}
+.personal-information-button1:hover {
+  background-color: #62778F;
+}
+.personal-information-text01 {
+  font-size: 24px;
+  margin-top: var(--dl-space-space-unit);
+}
+.personal-information-container04 {
+  flex: 0 0 auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.personal-information-text02 {
+  width: var(--dl-size-size-medium);
+  font-size: 20px;
+}
+.personal-information-textinput {
+  width: var(--dl-size-size-xxlarge);
+  border-width: 0px;
+}
+.personal-information-container05 {
+  flex: 0 0 auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin-top: var(--dl-space-space-unit);
+  align-items: center;
+  margin-bottom: var(--dl-space-space-unit);
+  justify-content: flex-start;
+}
+.personal-information-text03 {
+  width: var(--dl-size-size-medium);
+  font-size: 20px;
+}
+.personal-information-select {
+  width: var(--dl-size-size-xxlarge);
+  padding: var(--dl-space-space-halfunit);
+}
+.personal-information-container06 {
+  flex: 0 0 auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.personal-information-text04 {
+  width: var(--dl-size-size-medium);
+  font-size: 20px;
+}
+.personal-information-textinput1 {
+  width: var(--dl-size-size-xxlarge);
+  border-width: 0px;
+}
+.personal-information-text05 {
+  font-size: 24px;
+  margin-top: var(--dl-space-space-unit);
+}
+.personal-information-container07 {
+  flex: 0 0 auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.personal-information-text06 {
+  width: var(--dl-size-size-medium);
+  font-size: 20px;
+}
+.personal-information-textinput2 {
+  width: 64px;
+  border-width: 0px;
+  margin-right: var(--dl-space-space-fourunits);
+}
+.personal-information-text07 {
+  width: var(--dl-size-size-medium);
+  font-size: 20px;
+}
+.personal-information-input {
+  width: 64px;
+  border-width: 0px;
+}
+.personal-information-text08 {
+  font-size: 24px;
+  margin-top: var(--dl-space-space-unit);
+}
+.personal-information-add-button {
+  padding: 0;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  background-color: #7142ff;
+  border-radius: var(--dl-radius-radius-round);
+  justify-content: center;
+}
+.personal-information-add-button:hover {
+  background-color: #9162ff;
+}
+.personal-information-image1 {
+  width: 15px;
+  object-fit: cover;
+  align-self: center;
+  border-radius: var(--dl-radius-radius-round);
+}
+.personal-information-text09 {
+  font-size: 24px;
+  margin-top: var(--dl-space-space-unit);
+}
+.personal-information-container08 {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.personal-information-container09 {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  border-color: #42576F;
+  border-width: 3px;
+  border-radius: var(--dl-radius-radius-radius8);
+  justify-content: center;
+  background-color: #D9D9D9;
+}
+.personal-information-text10 {
+  margin: var(--dl-space-space-halfunit);
+  width: 200px;
+}
+.personal-information-container10 {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  margin-left: var(--dl-space-space-threeunits);
+  flex-direction: column;
+}
+.personal-information-button2 {
+  color: var(--dl-color-gray-white);
+  align-self: stretch;
+  text-align: center;
+  border-width: 0px;
+  margin-bottom: var(--dl-space-space-halfunit);
+  background-color: #7142ff;
+}
+.personal-information-button2:hover {
+  background-color: #9162ff;
+}
+.personal-information-button3 {
+  color: var(--dl-color-gray-white);
+  align-self: stretch;
+  text-align: center;
+  border-width: 0px;
+  background-color: #42576F;
+}
+.personal-information-button3:hover {
+  background-color: #62778F;
+}
+.personal-information-container11 {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  margin-top: var(--dl-space-space-twounits);
+  margin-bottom: var(--dl-space-space-halfunit);
+  align-items: flex-start;
+  flex-direction: row;
+}
+.personal-information-button4 {
+  color: var(--dl-color-gray-white);
+  width: var(--dl-size-size-xlarge);
+  text-align: center;
+  border-width: 0px;
+  margin-right: var(--dl-space-space-unit);
+  background-color: #42576F;
+}
+.personal-information-button4:hover {
+  background-color: #62778F;
+}
+.personal-information-button5 {
+  color: var(--dl-color-gray-white);
+  width: var(--dl-size-size-xlarge);
+  text-align: center;
+  border-width: 0px;
+  background-color: #42576F;
+}
+.personal-information-button5:hover {
+  background-color: #62778F;
+}
+.personal-information-text11 {
+  margin-top: var(--dl-space-space-fourunits);
+  margin-bottom: var(--dl-space-space-fourunits);
+}

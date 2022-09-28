@@ -1,0 +1,27 @@
+.settings-menu-button-container {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+.settings-menu-button-button {
+  width: 100%;
+  display: flex;
+  border-width: 0px;
+  flex-direction: row;
+  background-color: transparent;
+  border-radius: 0px;
+}
+.settings-menu-button-button:hover {
+  background-color: #62778F;
+}
+.settings-menu-button-image {
+  width: 30px;
+  object-fit: cover;
+  border-width: 4px;
+  border-radius: 4px;
+}
+.settings-menu-button-text {
+  color: #ffffff;
+  align-self: center;
+  margin-left: var(--dl-space-space-halfunit);
+}

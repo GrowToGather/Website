@@ -1,0 +1,40 @@
+.video-chat-buttons-container {
+  display: flex;
+  position: relative;
+}  
+.video-chat-buttons-button {
+  color: #ffffff;
+  width: var(--dl-size-size-medium);
+  height: 100%;
+  align-self: center;
+  text-align: center;
+  border-width: 0px;
+  padding-left: 0px;
+  border-radius: 0px;
+  padding-right: 0px;
+  background-color: transparent;
+}
+.video-chat-buttons-button:hover {
+  background-color: #495563;
+}
+.video-chat-buttons-image {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.video-chat-buttons-text {
+  font-size: 12px;
+}
+
+
+.video-chat-buttons-root-class-name2 {
+  margin-left: auto;
+}
+
+
+
+
+

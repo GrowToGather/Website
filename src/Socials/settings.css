@@ -1,0 +1,86 @@
+.settings-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(89, 89, 89, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.settings-container1 {
+  width: 800px;
+  height: 600px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  border-radius: var(--dl-radius-radius-radius8);
+  justify-content: flex-start;
+}
+.settings-container2 {
+  flex: 0 0 auto;
+  width: 250px;
+  height: auto;
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: #42576F;
+}
+.settings-text {
+  color: #ffcc49;
+  font-size: 32px;
+  align-self: center;
+  margin-top: var(--dl-space-space-unit);
+}
+.settings-container3 {
+  flex: 1;
+  height: 100%;
+  overflow-y: scroll;
+  padding: var(--dl-space-space-twounits);
+  background-color: #FFCC49;
+}
+.settings-button {
+  top: var(--dl-space-space-unit);
+  right: var(--dl-space-space-oneandhalfunits);
+  display: flex;
+  padding: 0px;
+  position: absolute;
+  border-width: 0px;
+  flex-direction: row;
+  background-color: #FFCC49;
+  border-radius: var(--dl-radius-radius-radius8);;
+}
+.settings-button:hover {
+  background-color: #d3d3d3;
+}
+.settings-image {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.settings-bottom-container {
+  width: 500px;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+  background-color: #FFCC49;
+}
+.settings-save-button {
+  bottom: var(--dl-space-space-halfunit);
+  right: 0;
+  display: flex;
+  position: absolute;
+  border-width: 0px;
+  flex-direction: row;
+  color: white;
+  background-color: #7142ff;
+}
+.settings-save-button:hover {
+  background-color: #9162ff;
+}
