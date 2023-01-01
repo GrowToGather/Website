@@ -10,6 +10,7 @@ if (!myHostname) {
 }
 
 var connection = null;
+var connectionEstablished = false;
 var serverUrl;
 var scheme = "ws";
 
@@ -34,6 +35,7 @@ connection.onmessage = function(evt) {
         Database.updateAccountData("clientID", msg.clientID)    
         break;
       case "last-settings": 
+        connectionEstablished = true;
         ClientConn.updateSettings(msg.personalInformation, msg.profileImg, msg.account)
         break;
       case "value-updated": 
@@ -68,16 +70,28 @@ connection.onmessage = function(evt) {
 
 
 async function waitForOpenSocket() {
+  console.log(connectionEstablished)
+
   if (AccountData.uuid == "") {
     return false
   }
-  if (connection.readyState !== connection.OPEN) {
-    return new Promise((resolve) => {
-      connection.addEventListener("open", async (_) => {
-        //console.log( await Database.getLastDates())
+  console.log(connectionEstablished)
+
+  if (!connectionEstablished) {
+    return new Promise(async(resolve) => {
+      if (connection.readyState !== connection.OPEN) {
+        connection.addEventListener("open", async (_) => {
+          //console.log( await Database.getLastDates())
+          console.log("Send connect request")
+          ServerConn.sendToServer({type: "connect", clientID: AccountData.clientID, dates: await Database.getLastDates()}, false)
+          resolve();
+        })
+      } else {
+        console.log("Send connect request")
         ServerConn.sendToServer({type: "connect", clientID: AccountData.clientID, dates: await Database.getLastDates()}, false)
         resolve();
-      })
+      }
+
     });
   }
   return false
@@ -104,8 +118,10 @@ class ServerConnection {
     var waiting = Database.waitForDatabase()
     if (waiting) {
       return new Promise(async function(resolve, reject) {
+        console.log("test")
         var hmm = await waiting
         hmm = await waitForOpenSocket()
+        console.log(hmm)
         resolve()
     });
     } else {

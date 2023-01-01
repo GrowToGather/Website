@@ -19,6 +19,7 @@ async function sendUpdate(objectStore, key) {
             reader.onload = function () {
                 ServerConn.putSpecial("settings", "profileImg", {blob: data.blob, date: 0}, {blob: reader.result, type: data.blob.type})    
             }
+            console.log(data);
             reader.readAsDataURL(data.blob);
             break;
     }
