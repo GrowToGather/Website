@@ -18,6 +18,7 @@ const SocialsApp = (props) => {
 
 
   var waiting = ServerConn.waitForServerAndDatabase()
+  console.log(waiting);
   if (waiting) {
     waiting.then(function() {loadData()}).catch()
   } else {
